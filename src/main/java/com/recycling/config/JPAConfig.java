@@ -17,7 +17,7 @@ public class JPAConfig {
 
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUsername("root");
-        dataSource.setPassword("1234");
+        dataSource.setPassword("majesty3609");
         dataSource.setUrl(
                 "jdbc:mysql://localhost:3306/imc_db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC");
 

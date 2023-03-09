@@ -4,11 +4,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>菜鸟教程(runoob.com)</title>
+    <title>Waste Recycle</title>
 </head>
 <body>
 <p>
-    今天的日期是: <%= (new java.util.Date()).toLocaleString()%>
+    Today is: <%= (new java.util.Date()).toLocaleString()%>
 </p>
 </body>
 </html>
