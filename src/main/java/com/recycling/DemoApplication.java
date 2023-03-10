@@ -12,7 +12,7 @@ import java.io.*;
 public class DemoApplication {
 
     public static void main(String[] args) throws IOException {
-//        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(DemoApplication.class, args);
 
         // test for geo query
         Resource resource = new ClassPathResource("static/location.json");
