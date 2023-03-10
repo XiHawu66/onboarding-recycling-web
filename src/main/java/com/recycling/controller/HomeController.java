@@ -19,6 +19,7 @@ public class HomeController {
     public ModelAndView searchResult(String lng, String lat) {
 
         // test version only
+        // check if the point is located in the FALLS CREEK ALPINE RESORT (UNINCORPORATED)
 
         GeoSpatialService geoSpatialService = new GeoSpatialService();
         String result = "Area Not Found";
