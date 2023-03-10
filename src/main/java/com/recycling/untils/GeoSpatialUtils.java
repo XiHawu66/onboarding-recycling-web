@@ -11,7 +11,7 @@ import java.util.List;
 
 public class GeoSpatialUtils {
 
-    public static boolean geoShapeQuery(String geoJsonString, double lng, double lat) {
+    public static boolean geoShapeQuery(String geoJsonString, Double lng, Double lat) {
         boolean result = false;
 
         Coordinate coordinate = new Coordinate(lng,lat);
@@ -47,6 +47,14 @@ public class GeoSpatialUtils {
         }
 
         return result;
+    }
+
+    public static String getLgaId(String geoJsonString) {
+        JSONObject jsonObject = JSONObject.parseObject(geoJsonString);
+        String properties = jsonObject.getString("properties");
+
+        return JSONObject.parseObject(properties).getString("lga_pid");
+
     }
 
     private static List<String> readCoordinatesList(String geoJsonString) {
