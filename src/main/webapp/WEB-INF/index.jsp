@@ -2,23 +2,41 @@
 <html>
 <head>
     <title>Waste Recycle</title>
+    <style type="text/css">
+        .divForm {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+
+            border: 1px solid red;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            margin-top: -200px;
+            margin-left: -150px;
+        }
+    </style>
 </head>
+
 <body>
-    <h2>Recycling Management</h2>
-    <form method="get" action="search_result">
+    <h2 align="center">Recycling Management System</h2>
 
-        <label>Longitude</label> &nbsp;
-        <label>
-            <input type="text" name="lng" />
-        </label> &nbsp;
+    <div class="divForm">
+        <form method="get" action="search_result">
 
-        <label>Latitude</label> &nbsp;
-        <label>
-            <input type="text" name="lat" />
-        </label> &nbsp;
+            <label>Longitude</label> &nbsp;
+            <label>
+                <input type="text" name="lng" />
+            </label> &nbsp;
 
-        <input type="submit" value="Search" />
-    </form>
+            <label>Latitude</label> &nbsp;
+            <label>
+                <input type="text" name="lat" />
+            </label> &nbsp;
+
+            <input type="submit" value="Search" />
+        </form>
+    </div>
 
 </body>
 </html>
