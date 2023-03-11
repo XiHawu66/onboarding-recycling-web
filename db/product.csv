@@ -1,0 +1,12 @@
+product_id,product,image,is_accepted_default,instructions
+1,Empty plastic takeaway food containers ,takeaway.jpg,1,Rinse
+2,Plastic bottles () ,bottle.jpg,1,"Bottle only, rinse and remove cap"
+3,Detergent bottles (bottle only)  ,detergent.jpg,1,"Bottle only, rinse and remove cap"
+4,"Empty plastic tubs (eg. yoghurt tubs, ice cream containers) ",tub.jpg,1,Rinse
+5,Plastic meat trays ,meat.jpg,1,Rinse
+6,Plastic plant pots ,pot.jpg,1,Rinse
+7,Plastic fruit punnets and biscuit trays ,punnet.jpg,1,Rinse
+8,Polystyrene,poly.jpg,0, 
+9,Plastic bags Soft plastics,bag.jpg,0, 
+10,Plastic cutlery,cutlery.jpg,0, 
+11,Plastic bottles tops,bottle_top.jpg,0, 
