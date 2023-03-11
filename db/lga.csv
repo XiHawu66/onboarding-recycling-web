@@ -1,88 +1,88 @@
-lga_pid,lga_name,bin
-VIC245,Falls Creek Alpine Resort,Yellow
-VIC246,Mount Buller Alpine Resort,Yellow
-VIC231,Corangamite Shire,Yellow
-VIC226,Kingston City,Yellow
-VIC227,Frankston City,Yellow
-VIC230,Golden Plains Shire,Yellow
-VIC190,Moira Shire,Yellow
-VIC191,Indigo Shire,Yellow
-VIC192,Wodonga City,Yellow
-VIC205,Darebin City,Yellow
-VIC207,Maroondah City,Yellow
-VIC232,West Wimmera Shire,Yellow
-VIC234,Maribyrnong City,Yellow
-VIC235,Hobsons Bay City,Yellow
-VIC195,Manningham City,Yellow
-VIC196,Whitehorse City,Yellow
-VIC201,Boroondara City,Yellow
-VIC209,Knox City,Yellow
-VIC210,Monash City,Yellow
-VIC202,Yarra City,Yellow
-VIC203,Stonnington City,Yellow
-VIC250,Murrindindi Shire,Yellow
-VIC152,Hindmarsh Shire,Yellow
-VIC173,Bass Coast Shire,Yellow
-VIC93,Greater Shepparton City,Yellow
-VIC236,Moorabool Shire,Yellow
-VIC241,Ballarat City,Yellow
-VIC94,Hepburn Shire,Yellow
-VIC105,Mount Alexander Shire,Yellow
-VIC169,Central Goldfields Shire,Yellow
-VIC183,Buloke Shire,Yellow
-VIC214,Gannawarra Shire,Yellow
-VIC222,Mildura Rural City,Yellow
-VIC110,Strathbogie Shire,Yellow
-VIC242,Alpine Shire,Yellow
-VIC225,Surf Coast Shire,Yellow
-VIC215,Greater Geelong City,Yellow
-VIC199,Benalla Rural City,Yellow
-VIC131,Moreland City,Yellow
-VIC248,Mount Hotham Alpine Resort,Yellow
-VIC121,Moonee Valley City,Yellow
-VIC186,Wangaratta Rural City,Yellow
-VIC221,Wyndham City,Yellow
-VIC219,Latrobe City,Yellow
-VIC244,Mansfield Shire,Yellow
-VIC223,Glenelg Shire,Yellow
-VIC233,Southern Grampians Shire,Yellow
-VIC229,Moyne Shire,Yellow
-VIC166,Northern Grampians Shire,Yellow
-VIC178,South Gippsland Shire,Yellow
-VIC200,Yarriambiack Shire,Yellow
-VIC220,Ararat Rural City,Yellow
-VIC217,Pyrenees Shire,Yellow
-VIC153,Horsham Rural City,Yellow
-VIC228,Macedon Ranges Shire,Yellow
-VIC194,Baw Baw Shire,Yellow
-VIC237,Melton City,Yellow
-VIC198,Hume City,Yellow
-VIC197,Whittlesea City,Yellow
-VIC189,Brimbank City,Yellow
-VIC243,East Gippsland Shire,Yellow
-VIC185,Loddon Shire,Yellow
-VIC239,Campaspe Shire,Yellow
-VIC206,Yarra Ranges Shire,Yellow
-VIC218,Wellington Shire,Yellow
-VIC212,Cardinia Shire,Yellow
-VIC211,Mitchell Shire,Yellow
-VIC193,Greater Bendigo City,Yellow
-VIC213,Casey City,Yellow
-VIC216,Nillumbik Shire,Yellow
-VIC249,Mount Baw Baw Alpine Resort,Yellow
-VIC177,Glen Eira City,Yellow
-VIC247,Greater Dandenong City,Yellow
-VIC179,Warrnambool City,Yellow
-VIC182,Bayside City,Yellow
-VIC184,Lake Mountain Alpine Resort,Yellow
-VIC224,Colac Otway Shire,Yellow
-VIC180,Swan Hill Rural City,Yellow
-VIC132,Melbourne City,Yellow
-VIC208,Port Phillip City,Yellow
-VIC181,Gabo Island,Yellow
-VIC251,French-Elizabeth-Sandstone Islands (Uninc),Yellow
-VIC188,Banyule City,Yellow
-VIC187,Towong Shire,Yellow
-VIC238,Queenscliffe Borough,Yellow
-VIC240,Mount Stirling Alpine Resort,Yellow
-VIC204,Mornington Peninsula Shire,Yellow
+lga_pid,lga_name,recycle_bin,rubbish_bin
+VIC245,Falls Creek Alpine Resort,Yellow,Red
+VIC246,Mount Buller Alpine Resort,Yellow,Red
+VIC231,Corangamite Shire,Yellow,Red
+VIC226,Kingston City,Yellow,Red
+VIC227,Frankston City,Yellow,Red
+VIC230,Golden Plains Shire,Yellow,Red
+VIC190,Moira Shire,Yellow,Red
+VIC191,Indigo Shire,Yellow,Red
+VIC192,Wodonga City,Yellow,Red
+VIC205,Darebin City,Yellow,Red
+VIC207,Maroondah City,Yellow,Red
+VIC232,West Wimmera Shire,Yellow,Red
+VIC234,Maribyrnong City,Yellow,Red
+VIC235,Hobsons Bay City,Yellow,Red
+VIC195,Manningham City,Yellow,Red
+VIC196,Whitehorse City,Yellow,Red
+VIC201,Boroondara City,Yellow,Red
+VIC209,Knox City,Yellow,Red
+VIC210,Monash City,Yellow,Red
+VIC202,Yarra City,Yellow,Red
+VIC203,Stonnington City,Yellow,Red
+VIC250,Murrindindi Shire,Yellow,Red
+VIC152,Hindmarsh Shire,Yellow,Red
+VIC173,Bass Coast Shire,Yellow,Red
+VIC93,Greater Shepparton City,Yellow,Red
+VIC236,Moorabool Shire,Yellow,Red
+VIC241,Ballarat City,Yellow,Red
+VIC94,Hepburn Shire,Yellow,Red
+VIC105,Mount Alexander Shire,Yellow,Red
+VIC169,Central Goldfields Shire,Yellow,Red
+VIC183,Buloke Shire,Yellow,Red
+VIC214,Gannawarra Shire,Yellow,Red
+VIC222,Mildura Rural City,Yellow,Red
+VIC110,Strathbogie Shire,Yellow,Red
+VIC242,Alpine Shire,Yellow,Red
+VIC225,Surf Coast Shire,Yellow,Red
+VIC215,Greater Geelong City,Yellow,Red
+VIC199,Benalla Rural City,Yellow,Red
+VIC131,Moreland City,Yellow,Red
+VIC248,Mount Hotham Alpine Resort,Yellow,Red
+VIC121,Moonee Valley City,Yellow,Red
+VIC186,Wangaratta Rural City,Yellow,Red
+VIC221,Wyndham City,Yellow,Red
+VIC219,Latrobe City,Yellow,Red
+VIC244,Mansfield Shire,Yellow,Red
+VIC223,Glenelg Shire,Yellow,Red
+VIC233,Southern Grampians Shire,Yellow,Red
+VIC229,Moyne Shire,Yellow,Red
+VIC166,Northern Grampians Shire,Yellow,Red
+VIC178,South Gippsland Shire,Yellow,Red
+VIC200,Yarriambiack Shire,Yellow,Red
+VIC220,Ararat Rural City,Yellow,Red
+VIC217,Pyrenees Shire,Yellow,Red
+VIC153,Horsham Rural City,Yellow,Red
+VIC228,Macedon Ranges Shire,Yellow,Red
+VIC194,Baw Baw Shire,Yellow,Red
+VIC237,Melton City,Yellow,Red
+VIC198,Hume City,Yellow,Red
+VIC197,Whittlesea City,Yellow,Red
+VIC189,Brimbank City,Yellow,Red
+VIC243,East Gippsland Shire,Yellow,Red
+VIC185,Loddon Shire,Yellow,Red
+VIC239,Campaspe Shire,Yellow,Red
+VIC206,Yarra Ranges Shire,Yellow,Red
+VIC218,Wellington Shire,Yellow,Red
+VIC212,Cardinia Shire,Yellow,Red
+VIC211,Mitchell Shire,Yellow,Red
+VIC193,Greater Bendigo City,Yellow,Red
+VIC213,Casey City,Yellow,Red
+VIC216,Nillumbik Shire,Yellow,Red
+VIC249,Mount Baw Baw Alpine Resort,Yellow,Red
+VIC177,Glen Eira City,Yellow,Red
+VIC247,Greater Dandenong City,Yellow,Red
+VIC179,Warrnambool City,Yellow,Red
+VIC182,Bayside City,Yellow,Red
+VIC184,Lake Mountain Alpine Resort,Yellow,Red
+VIC224,Colac Otway Shire,Yellow,Red
+VIC180,Swan Hill Rural City,Yellow,Red
+VIC132,Melbourne City,Yellow,Red
+VIC208,Port Phillip City,Yellow,Red
+VIC181,Gabo Island,Yellow,Red
+VIC251,French-Elizabeth-Sandstone Islands (Uninc),Yellow,Red
+VIC188,Banyule City,Yellow,Red
+VIC187,Towong Shire,Yellow,Red
+VIC238,Queenscliffe Borough,Yellow,Red
+VIC240,Mount Stirling Alpine Resort,Yellow,Red
+VIC204,Mornington Peninsula Shire,Yellow,Red

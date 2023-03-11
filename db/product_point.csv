@@ -1,0 +1,39 @@
+product_id,point_type,sequence,product_point
+1,instruction,1,Rinse
+1,instruction,2,remove cap
+1,note,1,did you know
+1,note,2,did you know line 2
+2,instruction,1,Rinse
+2,instruction,2,remove cap
+2,note,1,did you know
+2,note,2,did you know line 2
+3,instruction,1,"Bottle only, rinse and remove cap"
+3,note,1,did you know
+3,note,2,did you know line 2
+4,instruction,1,Rinse
+4,note,1,did you know
+4,note,2,did you know line 2
+5,instruction,1,Rinse
+5,note,1,did you know
+5,note,2,did you know line 2
+5,note,3,did you know line 2
+6,instruction,1,Rinse
+6,note,1,did you know
+6,note,2,did you know line 2
+6,note,3,did you know line 2
+7,instruction,1,Rinse
+7,note,1,did you know
+7,note,2,did you know line 2
+7,note,3,did you know line 2
+8,instruction,1,recycle
+8,note,1,did you know
+8,note,2,did you know line 2
+9,instruction,1,recycle
+9,note,1,did you know
+9,note,2,did you know line 2
+10,instruction,1,recycle
+10,note,1,did you know
+10,note,2,did you know line 2
+11,instruction,1,recycle
+11,note,1,did you know
+11,note,2,did you know line 2

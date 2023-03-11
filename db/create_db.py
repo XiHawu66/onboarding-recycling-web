@@ -1,17 +1,7 @@
 #https://geoscape.com.au/wp-content/uploads/2021/07/Geoscape-LGA-Localities-Wards-Design-Concepts.pdf
-
 import pandas as pd
 import mysql.connector
 from mysql.connector import errorcode
-# import pymysql
-# from sqlalchemy import create_engine
-
-#from dbfread import DBF #for reading dbase files
-#import sqlite3
-#import json
-
-# import the module
-
 
 DB_NAME = 'plastic'
 
@@ -22,7 +12,8 @@ TABLES['lga'] = (
     CREATE TABLE IF NOT EXISTS lga (
       lga_pid varchar(15) NOT NULL,
       lga_name varchar(255) NOT NULL,
-      bin varchar(50)  NOT NULL,
+      recycle_bin varchar(50)  NOT NULL,	
+      rubbish_bin varchar(50)  NOT NULL,
       PRIMARY KEY (lga_pid)
     ) ENGINE=InnoDB    
     """
@@ -34,8 +25,8 @@ TABLES['product'] = (
       product_id int NOT NULL,
       product varchar(255) NOT NULL,
       image varchar(50) NOT NULL,
+      image_small  varchar(50) NOT NULL,
       is_accepted_default int NOT NULL,
-      instructions varchar(200) NULL,
       PRIMARY KEY (product_id)
     ) ENGINE=InnoDB
     """
@@ -50,20 +41,42 @@ TABLES['lga_product'] = (
       PRIMARY KEY (lga_pid,product_id)
     ) ENGINE=InnoDB
     """
-    )   
+    ) 
+
+TABLES['bin'] = (
+    """
+    CREATE TABLE IF NOT EXISTS bin (
+      bin varchar(15) NOT NULL,        
+      bin_image varchar(15) NOT NULL,        
+      PRIMARY KEY (bin)
+    ) ENGINE=InnoDB
+    """
+    )     
+
+TABLES['product_point'] = (
+    """
+    CREATE TABLE IF NOT EXISTS product_point (
+      product_id int NOT NULL,        
+      point_type varchar(15) NOT NULL,        
+      sequence int NOT NULL, 
+      product_point varchar(255) NOT NULL        
+    ) ENGINE=InnoDB
+    """
+    )     
+        			
+
+
 
 table_sources = [
          ['lga','lga.csv']
         ,['product','product.csv']
         ,['lga_product','lga_product.csv']
+        ,['bin','bin.csv']
+        ,['product_point','product_point.csv']
     ]   
     
 
 def db_connect(server_host,user_name,pw):
-    # con = pymysql.connect(host=server_host,
-    #                         user=user_name,
-    #                         password=pw)
-
     con = mysql.connector.connect(
         host=server_host,
         user=user_name,
@@ -72,19 +85,12 @@ def db_connect(server_host,user_name,pw):
     )   
     return con 
 
-# # # create sqlalchemy engine
-# def db_engine(host,user,pw):
-#     engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
-#                         .format(user=user,
-#                                 pw=pw,
-#                                 db=DB_NAME)
-#                             )
 
 
 def create_database(cursor):
     try:
         cursor.execute(
-            "CREATE DATABASE {} DEFAULT CHARACTER SET 'utf8'".format(DB_NAME))
+            "CREATE DATABASE IF NOT EXISTS {} DEFAULT CHARACTER SET 'utf8'".format(DB_NAME))
     except mysql.connector.Error as err:      
         print("Failed creating database: {}".format(err))
         #exit(1)
@@ -105,6 +111,7 @@ def create_database(cursor):
 def create_tables(cursor):
     for table_name in TABLES:
         table_description = TABLES[table_name]
+        cursor.execute("DROP TABLE IF EXISTS {}".format(table_name))
         try:
             print("Creating table {}: ".format(table_name), end='')
             cursor.execute(table_description)
@@ -134,7 +141,6 @@ def populate_tables(cur,con):
 
         # Insert DataFrame recrds one by one.
         for i,row in data.iterrows():
-            #sql = "INSERT INTO " + table_name + " ('" +cols + "') VALUES (" + "%s,"*(len(row)-1) + "%s)"
             sql = "INSERT INTO " + table_name + " (`" +cols + "`) VALUES (" + "%s,"*(len(row)-1) + "%s)"
             #print (sql)
             cur.execute(sql, tuple(row))
@@ -143,46 +149,46 @@ def populate_tables(cur,con):
         con.commit()
 
 
-
-
-
 def main():
     host="localhost"
     user="root"
     pw=""
 
     con  = db_connect(host,user,pw)
-    
     cur = con.cursor()
-    # create_database(cur)
-    cur.execute("USE {}".format(DB_NAME))
-  
+    
+    create_database(cur)
     create_tables(cur)
-
-    #engine = db_engine(host,user,pw)
     populate_tables(cur,con)
 
     con.commit()
     con.close()
 
         
-
-    # cur.execute("USE {}".format(DB_NAME))
-    # df_lga = pd.read_csv('lga_clean.csv')
-    # df_prod = pd.read_csv('product.csv')
-    # df_lga_prod = pd.read_csv('lga_product.csv')
-
-
-    
-
-    
-
-
-
-
-
 if __name__ == '__main__':
     main()
+
+# import pymysql
+# from sqlalchemy import create_engine
+
+#from dbfread import DBF #for reading dbase files
+#import sqlite3
+#import json
+
+
+# cur.execute("USE {}".format(DB_NAME))
+# df_lga = pd.read_csv('lga_clean.csv')
+# df_prod = pd.read_csv('product.csv')
+# df_lga_prod = pd.read_csv('lga_product.csv')
+
+# # # create sqlalchemy engine
+# def db_engine(host,user,pw):
+#     engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
+#                         .format(user=user,
+#                                 pw=pw,
+#                                 db=DB_NAME)
+#                             )
+
 
 
 # def Createlga(cur,con):
