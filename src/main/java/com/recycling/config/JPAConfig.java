@@ -19,7 +19,7 @@ public class JPAConfig {
         dataSource.setUsername("root");
         dataSource.setPassword("1234");
         dataSource.setUrl(
-                "jdbc:mysql://localhost:3306/imc_db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC");
+                "jdbc:mysql://localhost:3306/plastic?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC");
 
         return dataSource;
     }
