@@ -13,7 +13,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
-          <factory-entry name="entityManagerFactory" />
+          <factory-entry name="entityManagerFactory" value="fb447536-a328-4663-b516-16609294d4b2" />
           <factory-entry name="onboarding-recycling-web" value="a65694dd-5604-4e72-a790-91069f579df1" />
         </datasource-mapping>
         <naming-strategy-map />
@@ -21,6 +21,9 @@
     </facet>
     <facet type="Spring" name="Spring">
       <configuration />
+    </facet>
+    <facet type="Python" name="Python">
+      <configuration sdkName="Python 3.10 (onboarding-recycling-web)" />
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
@@ -31,6 +34,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/webapp" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="jdk" jdkName="1.8 (2)" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -129,5 +133,6 @@
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.47" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.4" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.24" level="project" />
+    <orderEntry type="library" name="Python 3.10 (onboarding-recycling-web) interpreter library" level="application" />
   </component>
 </module>

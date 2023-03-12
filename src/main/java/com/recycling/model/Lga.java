@@ -6,16 +6,18 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "lga")
+@Table(name = "Lga")
 public class Lga {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "la_pid")
+    @Column(name = "lga_pid")
     private String lga_pid;
     @Column(name = "lga_name")
     private String lga_name;
-    @Column(name = "bin")
-    private String bin;
+    @Column(name = "recycle_bin")
+    private String recycle_bin;
+    @Column(name = "rubbish_bin")
+    private String rubbish_bin;
 
     public String getLga_pid() {
         return lga_pid;
@@ -33,12 +35,20 @@ public class Lga {
         this.lga_name = lga_name;
     }
 
-    public String getBin() {
-        return bin;
+    public String getRecycle_bin() {
+        return recycle_bin;
     }
 
-    public void setBin(String bin) {
-        this.bin = bin;
+    public void setRecycle_bin(String recycle_bin) {
+        this.recycle_bin = recycle_bin;
+    }
+
+    public String getRubbish_bin() {
+        return rubbish_bin;
+    }
+
+    public void setRubbish_bin(String rubbish_bin) {
+        this.rubbish_bin = rubbish_bin;
     }
 
     @Override
@@ -46,20 +56,8 @@ public class Lga {
         return "Lga{" +
                 "lga_pid='" + lga_pid + '\'' +
                 ", lga_name='" + lga_name + '\'' +
-                ", bin='" + bin + '\'' +
+                ", recycle_bin='" + recycle_bin + '\'' +
+                ", rubbish_bin='" + rubbish_bin + '\'' +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Lga lga = (Lga) o;
-        return Objects.equals(lga_pid, lga.lga_pid) && Objects.equals(lga_name, lga.lga_name) && Objects.equals(bin, lga.bin);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(lga_pid, lga_name, bin);
     }
 }
