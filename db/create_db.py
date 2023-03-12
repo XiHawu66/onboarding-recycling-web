@@ -152,7 +152,7 @@ def populate_tables(cur,con):
 def main():
     host="localhost"
     user="root"
-    pw=""
+    pw="1234"
 
     con  = db_connect(host,user,pw)
     cur = con.cursor()

@@ -5,15 +5,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class PlasticController {
+public class ProductController {
 
-    @RequestMapping("/Plastic")
+    @RequestMapping("/product")
     public ModelAndView PlasticInfo() {
-        String PlasticInfo = "Get it later from database";
+        String ProductInfo = "Get it later from database";
 
 
-        ModelAndView mav = new ModelAndView("Plastic");
-        mav.addObject("Plastic", PlasticInfo);
+        ModelAndView mav = new ModelAndView("product");
+        mav.addObject("product", ProductInfo);
         return mav;
 
     }

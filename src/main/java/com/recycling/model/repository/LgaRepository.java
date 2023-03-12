@@ -12,6 +12,6 @@ import java.util.List;
 public interface LgaRepository extends JpaRepository<Lga,String> {
 
     @Transactional
-    @Query(value = "select * from lga")
-    List<Lga> SearchLga (String lga_pid,String lga_name,String bin);
+    @Query(value = "select l.lga_name,l.recycle_bin,l.rubbish_bin FROM Lga l WHERE l.lga_pid = 'VIC251'")
+    List<Lga> SearchLga (String lga_name,String recycle_bin,String rubbish_bin);
 }

@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Plastic Information</title>
+    <title>Local Government Area Information</title>
 </head>
 <body>
-    <h1>${Plastic}</h1>
+    <h1>${lgas}</h1>
 </body>
 </html>
