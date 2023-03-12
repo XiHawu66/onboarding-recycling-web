@@ -17,9 +17,10 @@ public class LgaController {
 
     @RequestMapping("/lga")
     public ModelAndView LgaInfo() {
-        String lgaInfo = "Get it later from database";
 
         List<Lga> lgas = lgaRepository.SearchLga();
+
+        List<Lga> all = lgaRepository.findAll();
 
         ModelAndView mav = new ModelAndView("lga");
         mav.addObject("lga",lgas);

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: EdwardElric
@@ -11,6 +12,6 @@
     <title>Local Government Area Information</title>
 </head>
 <body>
-    <h1>${lgas}</h1>
+   <h1>${lgas}</h1>
 </body>
 </html>
