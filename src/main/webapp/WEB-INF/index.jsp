@@ -24,15 +24,16 @@
     <div class="divForm">
         <form method="get" action="search_result">
 
-            <label>Longitude</label> &nbsp;
+            <label>Address</label> &nbsp;
             <label>
-                <input type="text" name="lng" />
+                <input type="text" name="address" />
             </label> &nbsp;
 
-            <label>Latitude</label> &nbsp;
+            <label>Postcode</label> &nbsp;
             <label>
-                <input type="text" name="lat" />
+                <input type="text" name="postcode" />
             </label> &nbsp;
+
 
             <input type="submit" value="Search" />
         </form>
