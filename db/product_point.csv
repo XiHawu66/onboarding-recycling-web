@@ -1,39 +1,37 @@
 product_id,point_type,sequence,product_point
-1,instruction,1,Rinse
-1,instruction,2,remove cap
-1,note,1,did you know
-1,note,2,did you know line 2
-2,instruction,1,Rinse
-2,instruction,2,remove cap
-2,note,1,did you know
-2,note,2,did you know line 2
-3,instruction,1,"Bottle only, rinse and remove cap"
-3,note,1,did you know
-3,note,2,did you know line 2
-4,instruction,1,Rinse
-4,note,1,did you know
-4,note,2,did you know line 2
-5,instruction,1,Rinse
-5,note,1,did you know
-5,note,2,did you know line 2
-5,note,3,did you know line 2
-6,instruction,1,Rinse
-6,note,1,did you know
-6,note,2,did you know line 2
-6,note,3,did you know line 2
-7,instruction,1,Rinse
-7,note,1,did you know
-7,note,2,did you know line 2
-7,note,3,did you know line 2
-8,instruction,1,recycle
-8,note,1,did you know
-8,note,2,did you know line 2
-9,instruction,1,recycle
-9,note,1,did you know
-9,note,2,did you know line 2
-10,instruction,1,recycle
-10,note,1,did you know
-10,note,2,did you know line 2
-11,instruction,1,recycle
-11,note,1,did you know
-11,note,2,did you know line 2
+1,instruction,1,Scrap off the extra food 
+1,instruction,2,Give a quick rinse to the container
+2,instruction,1,Rinse before you dispose 
+2,instruction,2,Wait for the bottle to dry before disposing 
+2,instruction,3,Crush the bottle before disposing 
+2,instruction,4,Remove the bottle cap
+3,instruction,1,Ensure that the detergent bottles are cleaned before they are disposed
+4,instruction,1,Rinse before you dispose 
+4,instruction,2,Wait foe the bottle to dry before disposing
+5,instruction,1,Remove the absorption pad before disposing Wash the meat tray before disposing
+6,instruction,1,Make sure that the pots are cleaned before recycling 
+6,instruction,2,The pots should not contain soil or organic matter 
+6,instruction,3,Stack them on one above the other to reduce the space 
+7,instruction,1,Clean the fruit/food scraps 
+7,instruction,2,Give it a rinse before disposing
+8,instruction,1,This should be disposed into garbage bin as they are general waste as they cannot be recycled 
+9,instruction,1,This should be disposed into garbage bin as they are general waste as they cannot be recycled 
+10,instruction,1,This should be disposed into garbage bin as they are general waste as they cannot be recycled 
+11,instruction,1,These caps have to be separated from the bottle and disposed into the Red Bins
+1,note,1,Black plastic punnets are not recycled as sorting equipment cannot detect the colour black.
+1,note,1,Please put these in your rubbish bin
+2,note,1,Container Deposit Scheme(CDS) recycles drink containers. 
+2,note,1,Return the drink bottle to the nearest collection point and earn 10c for each container
+3,note,1,Bottles containing detergent that you wish to dispose can be done using Detox Your Home 
+3,note,1,40 Detox Your Home pop up events are held every year in Victoria in partnership with councils
+4,note,1,If they are in good condition
+5,note,1,The oil present in the meat tray will slow down the recycle process
+6,note,1,Undamaged pots can be donated to Port Phillip Resource Recovery Centre for reuse 
+7,note,1,Black plastic punnets are not recycled as sorting equipment cannot detect the colour black.
+7,note,2,Please put these in your rubbish bin
+8,note,1,Use the appropriate bin to dispose.
+8,note,1,These plastics get stuck in the conveyor belt and stop the recycling process when disposed in yellow bin 
+9,note,1,Reuse Tips: Swap your soft plastic bags with the reusable silicon bags
+10,note,1,These plastics have been specifically manufactured to break down in the general waste stream.
+10,note,2,They are not recyclable as they degenerate before the start of recycling
+11,note,1,Plastic lids that are washed clean can be recycled through Lids 4 Kids and Rethink Recycling Coop.
