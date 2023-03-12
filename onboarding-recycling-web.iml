@@ -13,7 +13,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
-          <factory-entry name="entityManagerFactory" />
+          <factory-entry name="entityManagerFactory" value="fb447536-a328-4663-b516-16609294d4b2" />
           <factory-entry name="onboarding-recycling-web" value="a65694dd-5604-4e72-a790-91069f579df1" />
         </datasource-mapping>
         <naming-strategy-map />

@@ -19,7 +19,7 @@ public class LgaController {
     public ModelAndView LgaInfo() {
         String lgaInfo = "Get it later from database";
 
-        List<Lga> lgas = lgaRepository.SearchLga("1", "1", "1");
+        List<Lga> lgas = lgaRepository.SearchLga();
 
         ModelAndView mav = new ModelAndView("lga");
         mav.addObject("lga",lgas);

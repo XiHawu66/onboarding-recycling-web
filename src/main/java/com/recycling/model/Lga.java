@@ -10,7 +10,7 @@ import java.util.Objects;
 public class Lga {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "la_pid")
+    @Column(name = "lga_pid")
     private String lga_pid;
     @Column(name = "lga_name")
     private String lga_name;

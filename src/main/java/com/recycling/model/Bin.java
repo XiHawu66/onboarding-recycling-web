@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Bin {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "la_pid")
+    @Column(name = "bin")
     private String bin;
     @Column(name = "bin_image")
     private String bin_image;
