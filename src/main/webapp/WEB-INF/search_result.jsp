@@ -1,4 +1,4 @@
-<jsp:useBean id="result" scope="request" type="java.lang.String"/>
+<jsp:useBean id="lgaPid" scope="request" type="java.lang.String"/>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
@@ -6,6 +6,6 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>${result}</h1>
+    <h1>The LGA Pid is ${lgaPid}</h1>
 </body>
 </html>

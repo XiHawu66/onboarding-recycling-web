@@ -15,30 +15,20 @@ public class HomeController {
         return "index";
     }
 
-    @RequestMapping( "/search_result")
+    @RequestMapping("/search_result")
     public ModelAndView searchResult(String lng, String lat) {
 
-        // test version only
-        // check if the point is located in the FALLS CREEK ALPINE RESORT (UNINCORPORATED)
-
+        String lgaPid = null;
         GeoSpatialService geoSpatialService = new GeoSpatialService();
-        String result = "Area Not Found";
+        ModelAndView mav = new ModelAndView("search_result");
 
         try {
-            boolean within = geoSpatialService.geoShapeQuery(Double.parseDouble(lng),Double.parseDouble(lat));
-            if (within) {
-                result = "Yes, it is in this area";
-            }
-            else {
-                result = "No, it is not in this area";
-            }
-
+            lgaPid = geoSpatialService.geoShapeQuery(Double.parseDouble(lng),Double.parseDouble(lat));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        ModelAndView mav = new ModelAndView("search_result");
-        mav.addObject("result",result);
+        mav.addObject("lgaPid",lgaPid);
 
 
         return mav;
