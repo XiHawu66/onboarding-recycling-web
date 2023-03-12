@@ -11,11 +11,11 @@ import java.util.List;
 
 public class GeoSpatialUtils {
 
-    public static boolean geoShapeQuery(String geoJsonString, Double lng, Double lat) {
+    public static boolean geoShapeQuery(List<String> multiPolygonCoordinates, Double lng, Double lat) {
         boolean result = false;
 
         Coordinate coordinate = new Coordinate(lng,lat);
-        List<String> multiPolygonCoordinates = readCoordinatesList(geoJsonString);
+//        List<String> multiPolygonCoordinates = readCoordinatesList(geoJsonString);
 
         for (String polygonCoordinates : multiPolygonCoordinates) {
 

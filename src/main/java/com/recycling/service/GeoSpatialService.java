@@ -15,7 +15,7 @@ import java.util.List;
 public class GeoSpatialService {
 
     public String geoShapeQuery(Double lng, Double lat) throws IOException {
-        System.out.println(System.currentTimeMillis());
+//        System.out.println(System.currentTimeMillis());
 
         Resource resource = new ClassPathResource("static/geo_json.json");
         InputStream is = resource.getInputStream();
@@ -31,22 +31,29 @@ public class GeoSpatialService {
         isr.close();
         is.close();
 
-        System.out.println(System.currentTimeMillis());
+//        System.out.println(System.currentTimeMillis());
 
         JSONObject jsonObject = JSONObject.parseObject(jsonFile);
         List<String> features = JSON.parseArray(jsonObject.getJSONArray("features").toJSONString(), String.class);
 
-        System.out.println(System.currentTimeMillis());
+//        System.out.println(System.currentTimeMillis());
 
         for (String feature : features) {
 
-            if (GeoSpatialUtils.geoShapeQuery(feature,lng,lat)) {
+            String geometry = JSONObject.parseObject(feature).getString("geometry");
+            List<String> coordinates = JSON.parseArray(
+                    JSONObject.parseObject(geometry).getJSONArray("coordinates").toJSONString(),
+                    String.class);
 
-                System.out.println(System.currentTimeMillis());
+            if (GeoSpatialUtils.geoShapeQuery(coordinates,lng,lat)) {
+
+//                System.out.println(System.currentTimeMillis());
 
                 return GeoSpatialUtils.getLgaId(feature);
             }
         }
+
+//                System.out.println(System.currentTimeMillis());
 
         return "-1";
     }
