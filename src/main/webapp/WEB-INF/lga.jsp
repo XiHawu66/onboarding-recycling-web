@@ -29,7 +29,7 @@
             <c:forEach items="${lga.recyclingProducts}" var="recyclingProduct">
                 <tr>
                     <td>${recyclingProduct.product}</td>
-                    <td>${recyclingProduct.image_small}</td>
+                    <td><img src = "images/${recyclingProduct.image_small}"></td>
                     <td>
                         <a href="${pageContext.request.contextPath}/productpoint?pid=${recyclingProduct.product_id}">Detail</a>
                     </td>
@@ -49,7 +49,7 @@
             <c:forEach items="${lga.nonRecyclingProducts}" var="nonRecyclingProduct">
                 <tr>
                     <td>${nonRecyclingProduct.product}</td>
-                    <td>${nonRecyclingProduct.image_small}</td>
+                    <td><img src = "images/${nonRecyclingProduct.image_small}"></td>
                 </tr>
             </c:forEach>
         </table>

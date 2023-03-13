@@ -13,14 +13,13 @@
     </head>
     <body>
     <div align="center">
-        <h2>Recycling Detail</h2>
+        <h2>${product.product} Recycling Detail</h2>
         <h3>
             <a href="${pageContext.request.contextPath}/home">Home</a>
         </h3>
+        <img src = "images/${product.image}">
+        <h3>Instructions for ${product.product}</h3>
         <table width="600" border="1" cellpadding="5">
-            <tr>
-                <th>Instructions for ${product.product}</th>
-            </tr>
             <tr>
                 <th width="150">Instruction sequence</th>
                 <th width="450">Instruction</th>
