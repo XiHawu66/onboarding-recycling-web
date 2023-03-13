@@ -2,6 +2,7 @@ package com.recycling.controller;
 
 import com.recycling.model.Lga;
 import com.recycling.model.repository.LgaRepository;
+import com.recycling.service.LgaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,17 +14,17 @@ import java.util.List;
 public class LgaController {
 
     @Autowired
-    private LgaRepository lgaRepository;
+    private LgaService lgaService;
 
     @RequestMapping("/lga")
-    public ModelAndView LgaInfo() {
+    public ModelAndView LgaInfo(String id) {
 
-        List<Lga> lgas = lgaRepository.SearchLga();
+        Lga lga = lgaService.findById(id);
 
-        List<Lga> all = lgaRepository.findAll();
+//        List<Lga> all = lgaRepository.findAll();
 
         ModelAndView mav = new ModelAndView("lga");
-        mav.addObject("lga",lgas);
+        mav.addObject("lga",lga);
         return mav;
 
     }

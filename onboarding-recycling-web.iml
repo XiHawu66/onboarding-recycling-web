@@ -12,7 +12,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="entityManagerFactory" value="fb447536-a328-4663-b516-16609294d4b2" />
-          <factory-entry name="onboarding-recycling-web" value="a65694dd-5604-4e72-a790-91069f579df1" />
+          <factory-entry name="onboarding-recycling-web" value="93284bd3-27c0-4d4e-8806-e600115fd0a2" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
