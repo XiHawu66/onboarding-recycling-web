@@ -15,9 +15,10 @@
 <body>
     <div align="center">
         <h1>${lga.lga_name}</h1>
-        <a href="${pageContext.request.contextPath}/product?lgaPid=${lga.lga_pid}">Recycling Sort Information</a>
         <h1>${lga.recycle_bin}</h1>
         <h1>${lga.rubbish_bin}</h1>
+        <a href="${pageContext.request.contextPath}/product?lgaPid=${lga.lga_pid}">Recycling Sort Information</a>
+
     </div>
 
 </body>
