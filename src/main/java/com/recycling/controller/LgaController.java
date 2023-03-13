@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
+import java.util.Objects;
 
 @Controller
 public class LgaController {
@@ -19,10 +20,17 @@ public class LgaController {
     @RequestMapping("/lga")
     public ModelAndView LgaInfo(String address, String postcode) {
 
+        if (address.equals("") && postcode.equals("")) {
+            ModelAndView mav = new ModelAndView("fault_result");
+            mav.addObject("err","You cannot leave the search box blank");
+
+            return mav;
+        }
+
         String lgaPid = null;
         GeoSpatialService geoSpatialService = new GeoSpatialService();
 
-        String lngLat = geoSpatialService.geocoding(address + " " + postcode);
+        String lngLat = geoSpatialService.geocoding(address + " Melbourne " + postcode);
         String lng = lngLat.split(",")[0];
         String lat = lngLat.split(",")[1];
 
@@ -32,14 +40,18 @@ public class LgaController {
             e.printStackTrace();
         }
 
+        if (Objects.equals(lgaPid, "-1") || lgaPid == null) {
+            ModelAndView mav = new ModelAndView("fault_result");
+            mav.addObject("err","Sorry, your search area is not located in Victoria");
+        }
+
         Lga lga = lgaService.findById(lgaPid);
 
         ModelAndView mav = new ModelAndView("lga");
         mav.addObject("lga",lga);
         return mav;
 
+
     }
-
-
 
 }
