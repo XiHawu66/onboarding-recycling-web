@@ -20,16 +20,16 @@ public class ProductController {
     @Autowired
     private LgaService lgaService;
 
-    @RequestMapping("/product")
-    public ModelAndView ProductInfo(String lgaPid) {
-
-        Lga lga = lgaService.findById(lgaPid);
-        Set<Product> recyclingProducts = lga.getRecyclingProducts();
-        Set<Product> nonRecyclingProducts = lga.getNonRecyclingProducts();
-
-        ModelAndView mav = new ModelAndView("product");
-        mav.addObject("recyclingProducts",recyclingProducts);
-        mav.addObject("nonRecyclingProducts",nonRecyclingProducts);
-        return mav;
-    }
+//    @RequestMapping("/product")
+//    public ModelAndView ProductInfo(String lgaPid) {
+//
+//        Lga lga = lgaService.findById(lgaPid);
+//        Set<Product> recyclingProducts = lga.getRecyclingProducts();
+//        Set<Product> nonRecyclingProducts = lga.getNonRecyclingProducts();
+//
+//        ModelAndView mav = new ModelAndView("product");
+//        mav.addObject("recyclingProducts",recyclingProducts);
+//        mav.addObject("nonRecyclingProducts",nonRecyclingProducts);
+//        return mav;
+//    }
 }

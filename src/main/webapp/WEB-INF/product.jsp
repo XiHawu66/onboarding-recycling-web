@@ -12,45 +12,45 @@
     <title>Product Information</title>
 </head>
 <body>
-    <div align="center">
-        <table width="600" border="1" cellpadding="5">
-            <tr>
-                <th>Recycling</th>
-            </tr>
-            <tr>
-                <th width="400">Product Name</th>
-                <th width="200">Product Img</th>
-            </tr>
-            <c:forEach items="${recyclingProducts}" var="recyclingProduct">
-                <tr>
-                    <td>${recyclingProduct.product}</td>
-                    <td>${recyclingProduct.image_small}</td>
-                    <td>
-                        <a href="${pageContext.request.contextPath}/product/detail?pid=${recyclingProduct.product_id}">Detail</a>
-                    </td>
-                </tr>
-            </c:forEach>
-        </table>
-    </div>
-    <div align="center" >
-        <table width="600" border="1" cellpadding="5">
-            <tr>
-                <th>Non-Recycling</th>
-            </tr>
-            <tr>
-                <th width="400">Product Name</th>
-                <th width="200">Product Img</th>
-            </tr>
-            <c:forEach items="${nonRecyclingProducts}" var="nonRecyclingProduct">
-                <tr>
-                    <td>${nonRecyclingProduct.product}</td>
-                    <td>${nonRecyclingProduct.image_small}</td>
-                    <td>
-                        <a href="${pageContext.request.contextPath}/product/detail?pid=${nonRecyclingProduct.product_id}">Detail</a>
-                    </td>
-                </tr>
-            </c:forEach>
-        </table>
-    </div>
+<%--    <div align="center">--%>
+<%--        <table width="600" border="1" cellpadding="5">--%>
+<%--            <tr>--%>
+<%--                <th>Recycling</th>--%>
+<%--            </tr>--%>
+<%--            <tr>--%>
+<%--                <th width="400">Product Name</th>--%>
+<%--                <th width="200">Product Img</th>--%>
+<%--            </tr>--%>
+<%--            <c:forEach items="${recyclingProducts}" var="recyclingProduct">--%>
+<%--                <tr>--%>
+<%--                    <td>${recyclingProduct.product}</td>--%>
+<%--                    <td>${recyclingProduct.image_small}</td>--%>
+<%--                    <td>--%>
+<%--                        <a href="${pageContext.request.contextPath}/product/detail?pid=${recyclingProduct.product_id}">Detail</a>--%>
+<%--                    </td>--%>
+<%--                </tr>--%>
+<%--            </c:forEach>--%>
+<%--        </table>--%>
+<%--    </div>--%>
+<%--    <div align="center" >--%>
+<%--        <table width="600" border="1" cellpadding="5">--%>
+<%--            <tr>--%>
+<%--                <th>Non-Recycling</th>--%>
+<%--            </tr>--%>
+<%--            <tr>--%>
+<%--                <th width="400">Product Name</th>--%>
+<%--                <th width="200">Product Img</th>--%>
+<%--            </tr>--%>
+<%--            <c:forEach items="${nonRecyclingProducts}" var="nonRecyclingProduct">--%>
+<%--                <tr>--%>
+<%--                    <td>${nonRecyclingProduct.product}</td>--%>
+<%--                    <td>${nonRecyclingProduct.image_small}</td>--%>
+<%--                    <td>--%>
+<%--                        <a href="${pageContext.request.contextPath}/product/detail?pid=${nonRecyclingProduct.product_id}">Detail</a>--%>
+<%--                    </td>--%>
+<%--                </tr>--%>
+<%--            </c:forEach>--%>
+<%--        </table>--%>
+<%--    </div>--%>
 </body>
 </html>

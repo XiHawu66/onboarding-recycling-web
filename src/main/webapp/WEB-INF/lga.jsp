@@ -18,6 +18,7 @@
         <h3>
             <a href="${pageContext.request.contextPath}/home">Home</a>
         </h3>
+        <h3>You are located in ${lga.lga_name}</h3>
         <table width="600" border="1" cellpadding="5">
             <tr>
                 <th>Recycling Bin:${lga.recycle_bin}</th>
