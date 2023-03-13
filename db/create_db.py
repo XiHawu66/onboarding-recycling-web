@@ -80,7 +80,8 @@ def db_connect(server_host,user_name,pw):
     con = mysql.connector.connect(
         host=server_host,
         user=user_name,
-        password=pw
+        password=pw#,
+        #auth_plugin='mysql_native_password'
         #,database=DB_NAME
     )   
     return con 
@@ -128,7 +129,7 @@ def populate_tables(cur,con):
     for tab in table_sources: 
         table_name = tab[0]
         file_name = tab[1]
-        print(tab)
+        #print(tab)
 
         #get data from file
         data = pd.read_csv(file_name)
@@ -137,16 +138,18 @@ def populate_tables(cur,con):
         cols = "`,`".join([str(i) for i in data.columns.tolist()])
 
         #eMPTY TABLE
-        cur.execute("DELETE FROM {}".format(table_name))
-
+        #cur.execute("DELETE FROM {}".format(table_name))
+        print("DELETE FROM {};".format(table_name))
         # Insert DataFrame recrds one by one.
         for i,row in data.iterrows():
             sql = "INSERT INTO " + table_name + " (`" +cols + "`) VALUES (" + "%s,"*(len(row)-1) + "%s)"
-            #print (sql)
-            cur.execute(sql, tuple(row))
+            vals = "','".join([str(i) for i in row.tolist()])
+            sql = "INSERT INTO " + table_name + " (`" +cols + "`) VALUES ('" +vals + "'); "
+            print (sql)
+            #cur.execute(sql, tuple(row))
 
         # save changes
-        con.commit()
+        #con.commit()
 
 
 def main():
@@ -154,15 +157,16 @@ def main():
     user="root"
     pw="1234"
 
-    con  = db_connect(host,user,pw)
-    cur = con.cursor()
-    
-    create_database(cur)
-    create_tables(cur)
+    #con  = db_connect(host,user,pw)
+    #cur = con.cursor()
+    cur = None 
+    con = None
+    #create_database(cur)
+    #create_tables(cur)
     populate_tables(cur,con)
 
-    con.commit()
-    con.close()
+    #con.commit()
+    #con.close()
 
         
 if __name__ == '__main__':
