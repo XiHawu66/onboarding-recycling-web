@@ -9,9 +9,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head>
-        <title>Product Information</title>
+        <title>Product Point Information</title>
     </head>
     <body>
-        <h1>${product}</h1>
+        <h1>${product_point}</h1>
     </body>
 </html>
