@@ -11,6 +11,10 @@
     <title>Product Information</title>
 </head>
 <body>
-    <h1>${product}</h1>
+    <div align="center">
+        <h1>${product.product}</h1>
+        <h1>${product.image}</h1>
+        <h1>${product.is_accepted_default}</h1>
+    </div>
 </body>
 </html>

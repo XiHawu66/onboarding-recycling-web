@@ -1,9 +1,5 @@
 package com.recycling.model;
-
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
-
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
 @Table(name = "lga")
