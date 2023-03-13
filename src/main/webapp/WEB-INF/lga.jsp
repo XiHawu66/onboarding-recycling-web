@@ -11,6 +11,7 @@
 <html>
 <head>
     <title>Local Government Area Information</title>
+    <a href="${pageContext.request.contextPath}/product?id=1">Click here to Product</a>
 </head>
 <body>
     <div align="center">
@@ -18,5 +19,6 @@
         <h1>${lga.recycle_bin}</h1>
         <h1>${lga.rubbish_bin}</h1>
     </div>
+
 </body>
 </html>
