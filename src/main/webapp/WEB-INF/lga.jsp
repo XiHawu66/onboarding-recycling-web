@@ -15,9 +15,9 @@
 </head>
 <body>
     <div align="center">
-        <h1>${lga.lga_name}</h1>
-        <h1>${lga.recycle_bin}</h1>
-        <h1>${lga.rubbish_bin}</h1>
+        <h1>"Local Government Area":   ${lga.lga_name}</h1>
+        <h1>"Recycle bin colour"   :   ${lga.recycle_bin}</h1>
+        <h1>"Rubbish bin colour"   :   ${lga.rubbish_bin}</h1>
     </div>
 
 </body>
