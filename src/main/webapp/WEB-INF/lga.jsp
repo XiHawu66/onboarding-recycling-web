@@ -14,11 +14,45 @@
 </head>
 <body>
     <div align="center">
-        <h1>${lga.lga_name}</h1>
-        <h1>${lga.recycle_bin}</h1>
-        <h1>${lga.rubbish_bin}</h1>
-        <a href="${pageContext.request.contextPath}/product?lgaPid=${lga.lga_pid}">Recycling Sort Information</a>
-
+        <h2>LGA Recycling Information</h2>
+        <h3>
+            <a href="${pageContext.request.contextPath}/home">Home</a>
+        </h3>
+        <table width="600" border="1" cellpadding="5">
+            <tr>
+                <th>Recycling Bin:${lga.recycle_bin}</th>
+            </tr>
+            <tr>
+                <th width="400">Item Name</th>
+                <th width="200">Item Image</th>
+            </tr>
+            <c:forEach items="${lga.recyclingProducts}" var="recyclingProduct">
+                <tr>
+                    <td>${recyclingProduct.product}</td>
+                    <td>${recyclingProduct.image_small}</td>
+                    <td>
+                        <a href="${pageContext.request.contextPath}/productpoint?pid=${recyclingProduct.product_id}">Detail</a>
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <div align="center">
+        <table width="600" border="1" cellpadding="5">
+            <tr>
+                <th>Rubbish Bin:${lga.rubbish_bin}</th>
+            </tr>
+            <tr>
+                <th width="400">Item Name</th>
+                <th width="200">Item Image</th>
+            </tr>
+            <c:forEach items="${lga.nonRecyclingProducts}" var="nonRecyclingProduct">
+                <tr>
+                    <td>${nonRecyclingProduct.product}</td>
+                    <td>${nonRecyclingProduct.image_small}</td>
+                </tr>
+            </c:forEach>
+        </table>
     </div>
 
 </body>
