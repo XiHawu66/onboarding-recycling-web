@@ -13,6 +13,8 @@
     <title>Local Government Area Information</title>
 </head>
 <body>
-   <h1>${lga.lga_name}</h1>
+    <div align="center">
+        <h1>${lga.lga_name}</h1>
+    </div>
 </body>
 </html>

@@ -22,7 +22,7 @@
     <h2 align="center">Recycling Management System</h2>
 
     <div class="divForm">
-        <form method="get" action="search_result">
+        <form method="get" action="lga">
 
             <label>Address</label> &nbsp;
             <label>
