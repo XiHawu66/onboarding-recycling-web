@@ -10,13 +10,26 @@
 <html>
     <head>
         <title>Product Point Information</title>
+
+        <style type="text/css">
+            .home {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+
+            }
+
+        </style>
     </head>
     <body>
+    <div class="home">
+        <h4>
+            <a href="javascript:history.back(-1)">Home</a>
+        </h4>
+    </div>
     <div align="center">
         <h2>${product.product} Recycling Detail</h2>
-        <h3>
-            <a href="${pageContext.request.contextPath}/home">Home</a>
-        </h3>
+
         <img src = "images/${product.image}">
         <h3>Instructions for ${product.product}</h3>
         <table width="600" border="1" cellpadding="5">

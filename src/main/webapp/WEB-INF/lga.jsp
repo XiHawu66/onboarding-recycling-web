@@ -20,14 +20,25 @@
         .div2 {
             border: none;
         }
+
+        .home {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+
+        }
     </style>
 </head>
 <body>
+    <div class="home">
+        <h4>
+            <a href="${pageContext.request.contextPath}/home">Home</a>
+        </h4>
+    </div>
+
     <div align="center" class="div1">
         <h2>LGA Recycling Information</h2>
-        <h3>
-            <a href="${pageContext.request.contextPath}/home">Home</a>
-        </h3>
+
         <h3>You are located in ${lga.lga_name}</h3>
         <table width="600" border="1" cellpadding="5">
             <tr>
