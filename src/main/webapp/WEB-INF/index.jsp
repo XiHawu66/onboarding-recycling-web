@@ -15,11 +15,19 @@
             margin-top: -200px;
             margin-left: -150px;
         }
+
+        .c1 {
+            border: 5px solid green;
+            background-color: green;
+        }
     </style>
 </head>
 
 <body>
-    <h2 align="center">Recycling Management System</h2>
+    <h1 align="center">Recycle 'in' Victoria</h1>
+
+    <h2 align="center" class="c1">RIV helps in providing help to the residents of Victoria in sorting your wastes. Recycling the used
+    household waste helps in making better choinces thus improving environmentally sustainable Victoria</h2>
 
     <div class="divForm">
         <form method="get" action="lga">

@@ -11,9 +11,19 @@
 <html>
 <head>
     <title>Local Government Area Information</title>
+
+    <style type="text/css">
+        .div1 {
+            border: none;
+        }
+
+        .div2 {
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <div align="center">
+    <div align="center" class="div1">
         <h2>LGA Recycling Information</h2>
         <h3>
             <a href="${pageContext.request.contextPath}/home">Home</a>
@@ -35,7 +45,7 @@
             </c:forEach>
         </table>
     </div>
-    <div align="center">
+    <div align="center" class="div2">
         <table width="600" border="1" cellpadding="5">
             <tr>
                 <th>Rubbish Bin:${lga.rubbish_bin}</th>
