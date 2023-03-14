@@ -30,10 +30,7 @@
             <c:forEach items="${lga.recyclingProducts}" var="recyclingProduct">
                 <tr>
                     <td>${recyclingProduct.product}</td>
-                    <td><img src = "images/${recyclingProduct.image_small}"></td>
-                    <td>
-                        <a href="${pageContext.request.contextPath}/productpoint?pid=${recyclingProduct.product_id}">Detail</a>
-                    </td>
+                    <td><a href="${pageContext.request.contextPath}/productpoint?pid=${recyclingProduct.product_id}"><img src = "images/${recyclingProduct.image_small}"></a></td>
                 </tr>
             </c:forEach>
         </table>
