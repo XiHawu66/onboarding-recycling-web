@@ -1,6 +1,5 @@
 package com.recycling.untils;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.locationtech.jts.geom.Coordinate;
 import org.locationtech.jts.geom.GeometryFactory;
@@ -57,16 +56,16 @@ public class GeoSpatialUtils {
 
     }
 
-    private static List<String> readCoordinatesList(String geoJsonString) {
-        JSONObject jsonObject = JSONObject.parseObject(geoJsonString);
-        String geometry = jsonObject.getString("geometry");
-
-        return JSON.parseArray(
-                JSONObject.parseObject(geometry).getJSONArray("coordinates").toJSONString(),
-                String.class
-        );
-
-    }
+//    private static List<String> readCoordinatesList(String geoJsonString) {
+//        JSONObject jsonObject = JSONObject.parseObject(geoJsonString);
+//        String geometry = jsonObject.getString("geometry");
+//
+//        return JSON.parseArray(
+//                JSONObject.parseObject(geometry).getJSONArray("coordinates").toJSONString(),
+//                String.class
+//        );
+//
+//    }
 
     private static Coordinate[] stringToCoordinate(String[] ringCoordinates) {
 

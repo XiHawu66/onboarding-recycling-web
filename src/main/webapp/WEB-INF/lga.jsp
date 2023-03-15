@@ -18,57 +18,69 @@
         }
 
         .div2 {
+            width: 100%;
             border: none;
         }
 
-        .home {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-
+        .tableLeft {
+            border: none;
+            width: 700px;
+            float: left;
         }
+
+        .tableRight {
+            border: none;
+            width: 700px;
+            float: right;
+        }
+
+        .home {
+            position: relative;
+            top: 10px;
+            /*left: 10px;*/
+        }
+
     </style>
 </head>
 <body>
-    <div class="home">
-        <h4>
-            <a href="${pageContext.request.contextPath}/home">Home</a>
-        </h4>
-    </div>
-
+<%--    <div align="center" class="home">--%>
+<%--        <h4>--%>
+<%--            <a href="${pageContext.request.contextPath}/home">Home</a>--%>
+<%--        </h4>--%>
+<%--    </div>--%>
     <div align="center" class="div1">
         <h2>LGA Recycling Information</h2>
 
         <h3>You are located in ${lga.lga_name}</h3>
-        <table width="600" border="1" cellpadding="5">
-            <tr>
-                <th>Recycling Bin:${lga.recycle_bin}</th>
-            </tr>
-            <tr>
-                <th width="400">Item Name</th>
-                <th width="200">Item Image</th>
-            </tr>
+
+        <h4 align="center" class="home">
+            <a href="${pageContext.request.contextPath}/home">Home</a>
+        </h4>
+    </div>
+
+    <div align="center" class="tableLeft">
+        <h3>Recycling Bin:${lga.recycle_bin}</h3>
+        <h4>Recycling Items</h4>
+
+        <table width="600" border="0" cellpadding="0">
             <c:forEach items="${lga.recyclingProducts}" var="recyclingProduct">
                 <tr>
                     <td>${recyclingProduct.product}</td>
-                    <td><a href="${pageContext.request.contextPath}/productpoint?pid=${recyclingProduct.product_id}"><img src = "images/${recyclingProduct.image_small}"></a></td>
+                    <td><a href="${pageContext.request.contextPath}/productpoint?pid=${recyclingProduct.product_id}"><img src = "images/${recyclingProduct.image_small}" width="100px" height="100px"></a></td>
                 </tr>
             </c:forEach>
         </table>
     </div>
-    <div align="center" class="div2">
-        <table width="600" border="1" cellpadding="5">
-            <tr>
-                <th>Rubbish Bin:${lga.rubbish_bin}</th>
-            </tr>
-            <tr>
-                <th width="400">Item Name</th>
-                <th width="200">Item Image</th>
-            </tr>
+
+    <div align="center" class="tableRight">
+        <h3>Rubbish Bin:${lga.rubbish_bin}</h3>
+        <h4>Rubbish Items</h4>
+
+        <table width="600" border="0" cellpadding="0">
             <c:forEach items="${lga.nonRecyclingProducts}" var="nonRecyclingProduct">
                 <tr>
                     <td>${nonRecyclingProduct.product}</td>
-                    <td><img src = "images/${nonRecyclingProduct.image_small}"></td>
+                    <td><img src = "images/${nonRecyclingProduct.image_small}" width="100px" height="100px"></td>
                 </tr>
             </c:forEach>
         </table>

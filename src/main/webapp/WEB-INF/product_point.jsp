@@ -13,58 +13,66 @@
 
         <style type="text/css">
             .home {
-                position: absolute;
+                position: relative;
                 top: 10px;
-                left: 10px;
+                /*left: 10px;*/
 
+            }
+
+            .tableLeft {
+                border: none;
+                width: 700px;
+                float: left;
+            }
+
+            .tableRight {
+                border: none;
+                width: 700px;
+                float: right;
+                top: 40px;
             }
 
         </style>
     </head>
     <body>
-    <div class="home">
-        <h4>
-            <a href="javascript:history.back(-1)">Home</a>
-        </h4>
-    </div>
     <div align="center">
         <h2>${product.product} Recycling Detail</h2>
 
-        <img src = "images/${product.image}">
-        <h3>Instructions for ${product.product}</h3>
-        <table width="600" border="1" cellpadding="5">
-            <tr>
-                <th width="150">Instruction sequence</th>
-                <th width="450">Instruction</th>
-            </tr>
-<%--            <c:forEach items="${productInstructions}" var="productInstruction">--%>
-<%--                <tr>--%>
-<%--                    <td>${productInstruction.sequence}</td>--%>
-<%--                    <td>${productInstruction.productPoint}</td>--%>
-<%--                </tr>--%>
-<%--            </c:forEach>--%>
-            <tr>
-                <td>${productInstruction.sequence}</td>
-                <td>${productInstruction.productPoint}</td>
-            </tr>
+        <h4 align="center" class="home">
+            <a href="javascript:history.back(-1)">Home</a>
+        </h4>
+
+        <img src = "images/${product.image}" width="300px" height="300px">
+    </div>
+    <div align="center" class="tableLeft">
+        <h3>Instructions</h3>
+        <table width="600" border="0" cellpadding="0">
+<%--            <tr>--%>
+<%--                <th width="150">Instruction sequence</th>--%>
+<%--                <th width="450">Instruction</th>--%>
+<%--            </tr>--%>
+            <c:forEach items="${productInstructions}" var="productInstruction">
+                <tr>
+                    <td width="100">${productInstruction.sequence}</td>
+                    <td width="500">${productInstruction.productPoint}</td>
+                </tr>
+            </c:forEach>
         </table>
     </div>
-<%--    <div align="center">--%>
-<%--        <table width="600" border="1" cellpadding="5">--%>
-<%--            <tr>--%>
-<%--                <th>Notes for ${product.product}</th>--%>
-<%--            </tr>--%>
+    <div align="center" class="tableRight">
+        <h3>Notes</h3>
+        <table width="600" border="0" cellpadding="0">
 <%--            <tr>--%>
 <%--                <th width="150">Note sequence</th>--%>
 <%--                <th width="450">Note</th>--%>
 <%--            </tr>--%>
-<%--            <c:forEach items="${productNotes}" var="productNote">--%>
-<%--                <tr>--%>
-<%--                    <td>${productNote.sequence}</td>--%>
-<%--                    <td>${productNote.productPoint}</td>--%>
-<%--                </tr>--%>
-<%--            </c:forEach>--%>
-<%--        </table>--%>
-<%--    </div>--%>
+            <c:forEach items="${productNotes}" var="productNote">
+                <tr>
+                    <td width="100">${productNote.sequence}</td>
+                    <td width="500">${productNote.productPoint}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
     </body>
 </html>

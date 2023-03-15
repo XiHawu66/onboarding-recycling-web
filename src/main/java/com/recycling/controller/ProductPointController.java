@@ -29,13 +29,12 @@ public class ProductPointController {
         Integer productId = Integer.parseInt(pid);
         Product product = productService.findById(productId);
 
-        List<ProductPoint> productInstructions = productPointService.findAllByProductId(productId);
-        ProductPoint productInstruction = productInstructions.get(0);
-//        List<ProductPoint> productNotes = productPointService.findAllByProductId(productId);
+        List<ProductPoint> productInstructions = productPointService.findProductInstructionByProductId(productId);
+        List<ProductPoint> productNotes = productPointService.findProductNoteByProductId(productId);
 
         ModelAndView mav = new ModelAndView("product_point");
-        mav.addObject("productInstruction",productInstruction);
-//        mav.addObject("productNotes",productNotes);
+        mav.addObject("productInstructions",productInstructions);
+        mav.addObject("productNotes",productNotes);
         mav.addObject("product",product);
 
         return mav;

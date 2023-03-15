@@ -18,9 +18,9 @@ public class LgaController {
     private LgaService lgaService;
 
     @RequestMapping("/lga")
-    public ModelAndView LgaInfo(String address, String postcode) {
+    public ModelAndView LgaInfo(String address) {
 
-        if (address.equals("") && postcode.equals("")) {
+        if (address.equals("")) {
             ModelAndView mav = new ModelAndView("fault_result");
             mav.addObject("err","You cannot leave the search box blank");
 
@@ -30,7 +30,7 @@ public class LgaController {
         String lgaPid = null;
         GeoSpatialService geoSpatialService = new GeoSpatialService();
 
-        String lngLat = geoSpatialService.geocoding(address + postcode);
+        String lngLat = geoSpatialService.geocoding(address);
         String lng = lngLat.split(",")[0];
         String lat = lngLat.split(",")[1];
 

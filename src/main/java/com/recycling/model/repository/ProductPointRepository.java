@@ -15,6 +15,4 @@ public interface ProductPointRepository extends JpaRepository<ProductPoint,Integ
     @Query(value = "SELECT DISTINCT pp FROM ProductPoint pp " +
             "WHERE (pp.productId = ?1) AND (pp.pointType = 'note') " )
     List<ProductPoint> findProductNoteByProductId(int productId);
-
-    List<ProductPoint> findAllByProductId(Integer productId);
 }

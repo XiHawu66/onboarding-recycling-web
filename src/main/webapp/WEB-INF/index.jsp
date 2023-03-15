@@ -34,13 +34,13 @@
 
             <label>Address</label> &nbsp;
             <label>
-                <input type="text" name="address" />
+                <input value="Address Postcode" type="text" name="address"/>
             </label> &nbsp;
 
-            <label>Postcode</label> &nbsp;
-            <label>
-                <input type="text" name="postcode" />
-            </label> &nbsp;
+<%--            <label>Postcode</label> &nbsp;--%>
+<%--            <label>--%>
+<%--                <input type="text" name="postcode" />--%>
+<%--            </label> &nbsp;--%>
 
 
             <input type="submit" value="Search" />

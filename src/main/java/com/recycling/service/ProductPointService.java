@@ -24,9 +24,5 @@ public class ProductPointService {
         return productPointRepository.findProductNoteByProductId(productId);
     }
 
-    public List<ProductPoint> findAllByProductId(Integer productId) {
-        return productPointRepository.findAllByProductId(productId);
-    }
-
 
 }
