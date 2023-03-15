@@ -30,11 +30,13 @@ public class LgaController {
         String lgaPid = null;
         GeoSpatialService geoSpatialService = new GeoSpatialService();
 
-        String lngLat = null;
+        String lngLat;
         try {
             lngLat = geoSpatialService.geocoding(address);
         } catch (Exception e) {
-            lngLat = "1,1";
+            ModelAndView mav = new ModelAndView("fault_result");
+            mav.addObject("err","Sorry, your input is not a valid address");
+            return mav;
         }
         String lng = lngLat.split(",")[0];
         String lat = lngLat.split(",")[1];
