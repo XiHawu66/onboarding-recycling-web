@@ -30,7 +30,12 @@ public class LgaController {
         String lgaPid = null;
         GeoSpatialService geoSpatialService = new GeoSpatialService();
 
-        String lngLat = geoSpatialService.geocoding(address);
+        String lngLat = null;
+        try {
+            lngLat = geoSpatialService.geocoding(address);
+        } catch (Exception e) {
+            lngLat = "1,1";
+        }
         String lng = lngLat.split(",")[0];
         String lat = lngLat.split(",")[1];
 
