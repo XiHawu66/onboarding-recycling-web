@@ -22,7 +22,6 @@ public class GeoSpatialService {
         JOpenCageGeocoder jOpenCageGeocoder = new JOpenCageGeocoder(openCageApi);
         JOpenCageForwardRequest request = new JOpenCageForwardRequest(address);
 
-        request.setRestrictToCountryCode("au");
         request.setMinConfidence(1);
         request.setNoAnnotations(false);
         request.setNoDedupe(true);

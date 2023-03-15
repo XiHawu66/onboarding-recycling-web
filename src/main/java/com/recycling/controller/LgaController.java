@@ -30,7 +30,7 @@ public class LgaController {
         String lgaPid = null;
         GeoSpatialService geoSpatialService = new GeoSpatialService();
 
-        String lngLat = geoSpatialService.geocoding(address + " Melbourne " + postcode);
+        String lngLat = geoSpatialService.geocoding(address + postcode);
         String lng = lngLat.split(",")[0];
         String lat = lngLat.split(",")[1];
 
@@ -43,6 +43,7 @@ public class LgaController {
         if (Objects.equals(lgaPid, "-1") || lgaPid == null) {
             ModelAndView mav = new ModelAndView("fault_result");
             mav.addObject("err","Sorry, your search area is not located in Victoria");
+            return mav;
         }
 
         Lga lga = lgaService.findById(lgaPid);
