@@ -3,9 +3,6 @@
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/com/mysql/mysql-connector-j/8.0.31/mysql-connector-j-8.0.31.jar!/" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/com/mysql/mysql-connector-j/8.0.31/mysql-connector-j-8.0.31-javadoc.jar!/" />
-    </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/com/mysql/mysql-connector-j/8.0.31/mysql-connector-j-8.0.31-sources.jar!/" />
     </SOURCES>

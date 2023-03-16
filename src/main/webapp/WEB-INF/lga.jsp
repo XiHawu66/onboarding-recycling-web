@@ -13,13 +13,16 @@
     <title>Local Government Area Information</title>
 
     <style type="text/css">
-        .div1 {
-            border: none;
-        }
+
 
         .div2 {
             width: 100%;
             border: none;
+        }
+        .title-name{
+            font-size:35px;
+            font-weight: 700;
+            color:darkgreen;
         }
 
         .tableLeft {
@@ -69,7 +72,9 @@
     <div class="home">
         <h4>
             <a href="${pageContext.request.contextPath}/home"><img src = "images/home.jpg" width="40px" height="40px"></a>
+            <span class="title-name" >Recycle 'in' Victoria</span>
         </h4>
+
     </div>
 
     <div align="center" class="div1">
