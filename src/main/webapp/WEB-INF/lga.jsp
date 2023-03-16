@@ -35,9 +35,9 @@
         }
 
         .home {
-            position: relative;
+            position: absolute;
             top: 10px;
-            /*left: 10px;*/
+            left: 10px;
         }
 
     </style>
@@ -48,14 +48,18 @@
 <%--            <a href="${pageContext.request.contextPath}/home">Home</a>--%>
 <%--        </h4>--%>
 <%--    </div>--%>
+    <div class="home">
+        <h4>
+            <a href="${pageContext.request.contextPath}/home"><img src = "images/home.jpg" width="50px" height="50px"></a>
+        </h4>
+    </div>
+
     <div align="center" class="div1">
         <h2>LGA Recycling Information</h2>
 
         <h3>You are located in ${lga.lga_name}</h3>
 
-        <h4 align="center" class="home">
-            <a href="${pageContext.request.contextPath}/home">Home</a>
-        </h4>
+        <h4>Click images below to get more information</h4>
     </div>
 
     <div align="center" class="tableLeft">

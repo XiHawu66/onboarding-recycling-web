@@ -26,7 +26,7 @@
     <h1 align="center">Recycle 'in' Victoria</h1>
 
     <h2 align="center" class="c1">RIV helps in providing help to the residents of Victoria in sorting your wastes. Recycling the used
-    household waste helps in making better choinces thus improving environmentally sustainable Victoria</h2>
+    household waste helps in making better choices thus improving environmentally sustainable Victoria</h2>
 
     <div class="divForm">
         <form method="get" action="lga">

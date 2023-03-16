@@ -15,7 +15,7 @@
             .home {
                 position: relative;
                 top: 10px;
-                /*left: 10px;*/
+                left: 10px;
 
             }
 
@@ -35,12 +35,17 @@
         </style>
     </head>
     <body>
+
+    <div class="home">
+        <h4 >
+            <a href="javascript:history.back(-1)"><img src = "images/home.jpg" width="50px" height="50px"></a>
+        </h4>
+    </div>
+
     <div align="center">
         <h2>${product.product} Recycling Detail</h2>
 
-        <h4 align="center" class="home">
-            <a href="javascript:history.back(-1)">Home</a>
-        </h4>
+
 
         <img src = "images/${product.image}" width="300px" height="300px">
     </div>
