@@ -12,7 +12,7 @@
             top: 50%;
             left: 50%;
             margin-top: -200px;
-            margin-left: -150px;
+            margin-left: -100px;
 
             transform: scale(1.5);
         }
@@ -37,6 +37,10 @@
 
 <body>
     <h1 align="center">Recycle 'in' Victoria</h1>
+
+    <h4 align="center">
+        <a>Home</a>
+    </h4>
 
     <br>
     <br>

@@ -77,7 +77,12 @@
 
         <h3>You are located in ${lga.lga_name}</h3>
 
-        <h4>Click images below to get more information</h4>
+        <h4>Click images below on recycling items to get more information</h4>
+
+        <h4>
+            <a href="${pageContext.request.contextPath}/home">Home >> </a> &nbsp;
+            <a>Council</a>
+        </h4>
     </div>
 
     <div align="center" class="tableLeft">

@@ -50,7 +50,11 @@
     <div align="center">
         <h2>${product.product} Recycling Detail</h2>
 
-
+        <h4>
+            <a href="${pageContext.request.contextPath}/home">Home >> </a> &nbsp;
+            <a href="javascript:history.back(-1)">Council >> </a> &nbsp;
+            <a>Detail</a>
+        </h4>
 
         <img src = "images/${product.image}" width="300px" height="300px">
     </div>
