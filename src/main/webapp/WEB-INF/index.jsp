@@ -4,7 +4,7 @@
     <title>Waste Recycle</title>
     <style type="text/css">
         .divForm {
-            position: absolute;
+            position: relative;
             width: 200px;
             height: 200px;
 
@@ -13,11 +13,14 @@
             left: 50%;
             margin-top: -200px;
             margin-left: -150px;
+
+            transform: scale(1.5);
         }
 
         .c1 {
             color: darkgreen;
-            position: relative;
+            position: absolute;
+
         }
 
         * {
@@ -34,6 +37,11 @@
 
 <body>
     <h1 align="center">Recycle 'in' Victoria</h1>
+
+    <br>
+    <br>
+    <br>
+
 
     <h2 align="center" class="c1">RIV helps in providing help to the residents of Victoria in sorting your wastes. Recycling the used
     household waste helps in making better choices thus improving environmentally sustainable Victoria</h2>
