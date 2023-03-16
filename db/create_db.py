@@ -59,7 +59,8 @@ TABLES['product_point'] = (
       product_id int NOT NULL,        
       point_type varchar(15) NOT NULL,        
       sequence int NOT NULL, 
-      product_point varchar(255) NOT NULL        
+      product_point varchar(255) NOT NULL,
+      PRIMARY KEY (product_id,point_type,sequence)     
     ) ENGINE=InnoDB
     """
     )     

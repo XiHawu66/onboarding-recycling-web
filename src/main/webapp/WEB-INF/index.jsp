@@ -8,7 +8,6 @@
             width: 200px;
             height: 200px;
 
-            border: 1px solid red;
             text-align: center;
             top: 50%;
             left: 50%;

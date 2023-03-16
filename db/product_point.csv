@@ -1,5 +1,4 @@
-product_id,point_type,sequence,product_point
-1,instruction,1,Scrap off the extra food 
+﻿1,instruction,1,Scrap off the extra food 
 1,instruction,2,Give a quick rinse to the container
 2,instruction,1,Rinse before you dispose 
 2,instruction,2,Wait for the bottle to dry before disposing 
@@ -19,18 +18,18 @@ product_id,point_type,sequence,product_point
 10,instruction,1,This should be disposed into garbage bin as they are general waste as they cannot be recycled 
 11,instruction,1,These caps have to be separated from the bottle and disposed into the Red Bins
 1,note,1,Black plastic punnets are not recycled as sorting equipment cannot detect the colour black.
-1,note,1,Please put these in your rubbish bin
+1,note,2,Please put these in your rubbish bin
 2,note,1,Container Deposit Scheme(CDS) recycles drink containers. 
-2,note,1,Return the drink bottle to the nearest collection point and earn 10c for each container
+2,note,2,Return the drink bottle to the nearest collection point and earn 10c for each container
 3,note,1,Bottles containing detergent that you wish to dispose can be done using Detox Your Home 
-3,note,1,40 Detox Your Home pop up events are held every year in Victoria in partnership with councils
+3,note,2,40 Detox Your Home pop up events are held every year in Victoria in partnership with councils
 4,note,1,If they are in good condition
 5,note,1,The oil present in the meat tray will slow down the recycle process
 6,note,1,Undamaged pots can be donated to Port Phillip Resource Recovery Centre for reuse 
 7,note,1,Black plastic punnets are not recycled as sorting equipment cannot detect the colour black.
 7,note,2,Please put these in your rubbish bin
 8,note,1,Use the appropriate bin to dispose.
-8,note,1,These plastics get stuck in the conveyor belt and stop the recycling process when disposed in yellow bin 
+8,note,2,These plastics get stuck in the conveyor belt and stop the recycling process when disposed in yellow bin 
 9,note,1,Reuse Tips: Swap your soft plastic bags with the reusable silicon bags
 10,note,1,These plastics have been specifically manufactured to break down in the general waste stream.
 10,note,2,They are not recyclable as they degenerate before the start of recycling
