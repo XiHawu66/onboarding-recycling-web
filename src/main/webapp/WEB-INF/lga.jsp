@@ -42,7 +42,7 @@
 
         * {
             font-family: Georgia,Times,Times New Roman,serif;
-            background-color: #bdd7bd;
+            background-color: #c8dac8;
         }
 
 
@@ -51,11 +51,11 @@
         }
 
         h5 {
-            color: darkorange;
+            color: #b69a29;
         }
 
         h6 {
-            color: darkred;
+            color: #5e0a0a;
         }
 
     </style>

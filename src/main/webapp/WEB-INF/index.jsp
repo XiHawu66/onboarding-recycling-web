@@ -25,7 +25,7 @@
 
         * {
             font-family: Georgia,Times,Times New Roman,serif;
-            background-color: #bdd7bd;
+            background-color: #c8dac8;
         }
 
 
