@@ -14,7 +14,7 @@
         <style type="text/css">
             .home {
                 position: relative;
-                top: 10px;
+                top: 0px;
                 left: 10px;
 
             }
@@ -32,13 +32,18 @@
                 top: 40px;
             }
 
+            * {
+                font-family: Georgia,Times,Times New Roman,serif;
+                background-color: #bdd7bd;
+            }
+
         </style>
     </head>
     <body>
 
     <div class="home">
         <h4 >
-            <a href="javascript:history.back(-1)"><img src = "images/home.jpg" width="50px" height="50px"></a>
+            <a href="javascript:history.back(-1)"><img src = "images/home.jpg" width="40px" height="40px"></a>
         </h4>
     </div>
 

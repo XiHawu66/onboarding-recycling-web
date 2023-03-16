@@ -16,10 +16,20 @@
         }
 
         .c1 {
-            border: 5px solid green;
-            background-color: green;
+            color: darkgreen;
+            position: relative;
         }
+
+        * {
+            font-family: Georgia,Times,Times New Roman,serif;
+            background-color: #bdd7bd;
+        }
+
+
+
     </style>
+
+
 </head>
 
 <body>
@@ -28,7 +38,7 @@
     <h2 align="center" class="c1">RIV helps in providing help to the residents of Victoria in sorting your wastes. Recycling the used
     household waste helps in making better choices thus improving environmentally sustainable Victoria</h2>
 
-    <div class="divForm">
+    <div align="center" class="divForm">
         <form method="get" action="lga">
 
             <label>Address</label> &nbsp;
@@ -44,7 +54,9 @@
 
             <input type="submit" value="Search" />
         </form>
+        <h5>* Enter your address in this format eg:(Oakleigh 3166)</h5>
     </div>
+
 
 </body>
 </html>

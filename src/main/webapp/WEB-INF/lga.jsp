@@ -35,9 +35,27 @@
         }
 
         .home {
-            position: absolute;
-            top: 10px;
+            position: relative;
+            top: 0px;
             left: 10px;
+        }
+
+        * {
+            font-family: Georgia,Times,Times New Roman,serif;
+            background-color: #bdd7bd;
+        }
+
+
+        h3 {
+            color: darkgreen;
+        }
+
+        h5 {
+            color: darkorange;
+        }
+
+        h6 {
+            color: darkred;
         }
 
     </style>
@@ -50,7 +68,7 @@
 <%--    </div>--%>
     <div class="home">
         <h4>
-            <a href="${pageContext.request.contextPath}/home"><img src = "images/home.jpg" width="50px" height="50px"></a>
+            <a href="${pageContext.request.contextPath}/home"><img src = "images/home.jpg" width="40px" height="40px"></a>
         </h4>
     </div>
 
@@ -63,7 +81,7 @@
     </div>
 
     <div align="center" class="tableLeft">
-        <h3>Recycling Bin:${lga.recycle_bin}</h3>
+        <h5>Recycling Bin:${lga.recycle_bin}</h5>
         <h4>Recycling Items</h4>
 
         <table width="600" border="0" cellpadding="0">
@@ -77,7 +95,7 @@
     </div>
 
     <div align="center" class="tableRight">
-        <h3>Rubbish Bin:${lga.rubbish_bin}</h3>
+        <h6>Rubbish Bin:${lga.rubbish_bin}</h6>
         <h4>Rubbish Items</h4>
 
         <table width="600" border="0" cellpadding="0">
