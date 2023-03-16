@@ -18,51 +18,50 @@ public class LgaController {
     private LgaService lgaService;
 
     @RequestMapping("/lga")
-    public ModelAndView LgaInfo(String address, String lgaPid) {
+    public ModelAndView LgaInfo(String address) {
 
-        if (address.equals("") && lgaPid == null) {
+        if (address.equals("")) {
             ModelAndView mav = new ModelAndView("fault_result");
-            mav.addObject("err","You cannot leave the search box blank");
+            mav.addObject("err", "You cannot leave the search box blank");
 
             return mav;
         }
 
-        if (lgaPid == null) {
 
-            GeoSpatialService geoSpatialService = new GeoSpatialService();
+        GeoSpatialService geoSpatialService = new GeoSpatialService();
 
-            String lngLat;
-            try {
-                lngLat = geoSpatialService.geocoding(address);
-            } catch (Exception e) {
-                ModelAndView mav = new ModelAndView("fault_result");
-                mav.addObject("err","Sorry, your input is not a valid address");
-                return mav;
-            }
-            String lng = lngLat.split(",")[0];
-            String lat = lngLat.split(",")[1];
-
-            try {
-                lgaPid = geoSpatialService.geoShapeQuery(Double.parseDouble(lng),Double.parseDouble(lat));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            if (Objects.equals(lgaPid, "-1") || lgaPid == null) {
-                ModelAndView mav = new ModelAndView("fault_result");
-                mav.addObject("err","Sorry, your search area is not located in Victoria");
-                return mav;
-            }
-
+        String lngLat;
+        try {
+            lngLat = geoSpatialService.geocoding(address);
+        } catch (Exception e) {
+            ModelAndView mav = new ModelAndView("fault_result");
+            mav.addObject("err", "Sorry, your input is not a valid address");
+            return mav;
         }
+        String lng = lngLat.split(",")[0];
+        String lat = lngLat.split(",")[1];
+
+        String lgaPid = null;
+        try {
+            lgaPid = geoSpatialService.geoShapeQuery(Double.parseDouble(lng), Double.parseDouble(lat));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        if (Objects.equals(lgaPid, "-1") || lgaPid == null) {
+            ModelAndView mav = new ModelAndView("fault_result");
+            mav.addObject("err", "Sorry, your search area is not located in Victoria");
+            return mav;
+        }
+
 
         Lga lga = lgaService.findById(lgaPid);
 
         ModelAndView mav = new ModelAndView("lga");
-        mav.addObject("lga",lga);
+        mav.addObject("lga", lga);
         return mav;
 
-
     }
+
 
 }

@@ -80,7 +80,7 @@
         <h4>Click images below on recycling items to get more information</h4>
 
         <h4>
-            <a href="${pageContext.request.contextPath}/home">Home >> </a> &nbsp;
+            <a href="${pageContext.request.contextPath}/home">Home</a> &nbsp;>>&nbsp;&nbsp;
             <a>Council</a>
         </h4>
     </div>

@@ -51,8 +51,8 @@
         <h2>${product.product} Recycling Detail</h2>
 
         <h4>
-            <a href="${pageContext.request.contextPath}/home">Home >> </a> &nbsp;
-            <a href="javascript:history.back(-1)">Council >> </a> &nbsp;
+            <a href="${pageContext.request.contextPath}/home">Home</a> &nbsp;>>&nbsp;&nbsp;
+            <a href="javascript:history.back(-1)">Council</a> &nbsp;>>&nbsp;&nbsp;
             <a>Detail</a>
         </h4>
 
